@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="GameApp" ui-keydown="{'pageup':'nav_to($event, \'users\')'}">
+	<head>
+		<title>Road 66</title>
+		<link rel="stylesheet" type="text/css" href="game.css">
+	</head>
+	<script src="angular.min.js"></script>
+	<script src="game.js"></script>
+	
+	<body id="gameAll" ng-controller="GameCtrl">
+		<div>
+			<div id="intro" ng-show="game == 0 && begin == 0 && high == 0">
+				<div align="center">
+					<a id="options" href="" ng-click="play()">Play</a><br />
+					<a id="options" href="" ng-click="highScore()">High score</a>
+				</div>
+			</div>
+			
+			<div id="sc" ng-show="game == 1">
+				Score : <span id="score">{{ score }}</span>
+				<div id="game" ng-show="game == 1 && high == 0">	
+					<img id="road" class="road" src="road.png">
+					<img id="player" src="player.png">
+					<img id="enemy" src="enemy.png">
+				</div>
+			</div>
+			
+			<div id="finish" ng-show="game == 0 && begin == 1 && high == 0">
+				<div align="center">
+					<img src="over.png"><br />
+					Name  : <input type="text" id="name"><br />
+					Score : {{ score }} <br />
+					<center><a id="skip" ng-click="registerScore()" href="index.html">Register</a></center>
+					<center><a id="skip" href="index.html">Skip</a></center>
+				</div>
+			</div>
+			
+			<div id="highsc" ng-show="high == 1">
+				<h2 style="color:orange">Best scores</h2>
+				<ul>
+					<li ng-repeat="x in highScore">
+						{{ x.name }} : {{ x.score }}
+					</li>
+				</ul>
+				<center><a id="skip" href="index.html">Skip</a></center>
+			</div>
+		</div>
+		<audio preload="auto" id="son"><source src="beep.mp3" type="audio/mp3"></audio>
+		
+	</body>
+</html>

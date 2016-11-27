@@ -1,0 +1,92 @@
+#game
+{
+	margin: 0px auto;
+	width: 400px;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+}
+#sc
+{
+	margin: 0px auto;
+	width: 400px;
+	border: 2px black solid;
+	position: relative;
+}
+#finish
+{
+	margin: 0px auto;
+	width: 400px;
+	height: 600px;
+	border: 2px black solid;
+	position: relative;
+}
+#intro
+{
+	background-image:url(background.jpg);
+	margin: 0px auto;
+	width: 400px;
+	height: 600px;
+	border: 2px black solid;
+	position: relative;
+}
+#highsc
+{
+	font-size:30px;
+	color: green;
+	margin: 0px auto;
+	width: 400px;
+	height: 600px;
+	border: 2px black solid;
+	position: relative;
+}
+#skip
+{
+	position: relative;
+	text-decoration: none;
+	color: 	rgb(255,0,0);
+	font-size: 48px;
+	text-align: center;
+}
+#skip:hover
+{
+	text-decoration: none;
+	color: 	rgb(255,128,0);
+	font-size: 48px;
+	text-align: center;
+}
+#options
+{
+	position: relative;
+	top: 470px;
+	text-decoration: none;
+	color: 	rgb(255,0,0);
+	font-size: 48px;
+}
+#options:hover
+{
+	text-decoration: none;
+	color: 	rgb(255,128,0);
+	font-size: 48px;
+}
+.road
+{
+	top:-500px;
+	margin-top:-5px;
+	z-index: 10;
+	position: relative;
+}
+#player
+{
+	z-index: 80; 
+	position: absolute; 
+	top: 455px; 
+	left: 70px;
+}
+#enemy
+{
+	z-index: 100; 
+	position: absolute; 
+	top: -2000px; 
+	left: 70px;
+}
